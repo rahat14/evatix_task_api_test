@@ -15,6 +15,11 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/test' , 'UserController@testAllUser') ;
+
+$router->get('/tasks/{user_id}' , 'TaskController@GetAllTaskById') ;
+ //deleteTask
+ $router-> get('/delete_task/{task_id}' ,'TaskController@deleteTask');
 
 
 
