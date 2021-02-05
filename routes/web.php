@@ -15,3 +15,25 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+
+
+
+
+
+
+ // all the post here 
+
+ $router-> post('/login' ,'UserController@login') ; 
+
+
+ $router-> post('/register' ,'UserController@UserRegistration') ;
+ 
+ $router-> post('/reset_pass' ,'UserController@ResetPass') ; 
+ 
+  
+ $router-> post('/add_task' ,'TaskController@insertTask');
+
+
+ $router-> post('/update_task' ,'TaskController@updateTask');
+
+
