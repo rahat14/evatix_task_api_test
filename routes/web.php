@@ -23,21 +23,15 @@ $router->get('/tasks/{user_id}' , 'TaskController@GetAllTaskById') ;
 
 
 
-
-
-
  // all the post here 
 
  $router-> post('/login' ,'UserController@login') ; 
 
-
  $router-> post('/register' ,'UserController@UserRegistration') ;
  
  $router-> post('/reset_pass' ,'UserController@ResetPass') ; 
- 
-  
- $router-> post('/add_task' ,'TaskController@insertTask');
 
+ $router-> post('/add_task' ,'TaskController@insertTask');
 
  $router-> post('/update_task' ,'TaskController@updateTask');
 
