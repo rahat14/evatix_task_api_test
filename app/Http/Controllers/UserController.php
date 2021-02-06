@@ -103,7 +103,7 @@ class UserController extends Controller
                 $user = new UserModel() ; 
                 $user -> user_name = str_replace('%20' , ' ' , $user_name) ; 
                 $user-> email = $mail ; 
-                $user-> isActive = true ; 
+                $user-> isActive = 0 ; 
                 $user-> password_hash = $passwordHash ; 
                 $user -> save() ; 
 

@@ -21,21 +21,14 @@ $router->get('/tasks/{user_id}' , 'TaskController@GetAllTaskById') ;
  //deleteTask
  $router-> get('/delete_task/{task_id}' ,'TaskController@deleteTask');
 
+
+ // post 
  $router-> post('/login' ,'UserController@login') ; 
 
-
  $router-> post('/register' ,'UserController@UserRegistration') ;
  
  $router-> post('/reset_pass' ,'UserController@ResetPass') ; 
 
- $router-> post('/add_task' ,'TaskController@insertTask');
-
-
- $router-> post('/register' ,'UserController@UserRegistration') ;
- 
- $router-> post('/reset_pass' ,'UserController@ResetPass') ; 
- 
-  
  $router-> post('/add_task' ,'TaskController@insertTask');
 
  $router-> post('/update_task' ,'TaskController@updateTask');
