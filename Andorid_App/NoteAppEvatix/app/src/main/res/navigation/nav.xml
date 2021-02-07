@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/walkthroughFragment">
+
+    <fragment
+        android:id="@+id/walkthroughFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.WalkthroughFragment"
+        android:label="fragment_walkthrough"
+        tools:layout="@layout/fragment_walkthrough" >
+        <action
+            android:id="@+id/action_walkthroughFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.ForgotPassFragment"
+        android:label="fragment_forgot_pass"
+        tools:layout="@layout/fragment_forgot_pass" >
+        <action
+            android:id="@+id/action_forgotPassFragment_to_resetPassFragment"
+            app:destination="@id/resetPassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassFragment"
+            app:destination="@id/forgotPassFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfulFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.SuccessfulFragment"
+        android:label="fragment_successful"
+        tools:layout="@layout/fragment_successful" >
+        <action
+            android:id="@+id/action_successfulFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.ResetPassFragment"
+        android:label="fragment_reset_pass"
+        tools:layout="@layout/fragment_reset_pass" >
+        <action
+            android:id="@+id/action_resetPassFragment_to_successfulFragment"
+            app:destination="@id/successfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        tools:layout="@layout/fragment_registration"
+        android:name="com.spinnertech.noteapp.ui.fragments.RegistrationFragment"
+        android:label="RegistrationFragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allListFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.AllListFragment"
+        android:label="fragment_all_list"
+        tools:layout="@layout/fragment_all_list" />
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.spinnertech.noteapp.ui.fragments.AddTaskFragment"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" />
+</navigation>

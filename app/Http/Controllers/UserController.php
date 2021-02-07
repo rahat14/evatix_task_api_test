@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\UserModel ; 
 use Illuminate\Http\Request  ; 
+
 use Laravel\Lumen\Routing\Controller as BaseController;
 
 class UserController extends Controller
@@ -103,7 +104,7 @@ class UserController extends Controller
                 $user = new UserModel() ; 
                 $user -> user_name = str_replace('%20' , ' ' , $user_name) ; 
                 $user-> email = $mail ; 
-                $user-> isActive = true ; 
+                $user-> isActive = 0 ; 
                 $user-> password_hash = $passwordHash ; 
                 $user -> save() ; 
 

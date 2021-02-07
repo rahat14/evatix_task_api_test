@@ -18,7 +18,15 @@ class TaskModel extends Model
             'dated',
             'is_whole_day',
             'is_completed',
-            'description'
+            'description', 
+            'date',
+            'duration',
+            'cat_id'
 
     ];
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\CategoryModel' , 'cat_id' , 'cat_id'); 
+    }
 }
