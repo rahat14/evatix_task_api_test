@@ -19,9 +19,11 @@ $router->get('/test' , 'UserController@testAllUser') ;
 
 $router->get('/tasks/{user_id}' , 'TaskController@GetAllTaskById') ;
  //deleteTask
- $router-> get('/delete_task/{task_id}' ,'TaskController@deleteTask');
+ $router-> get('/delete_task/{task_id}' ,'TaskController@deleteTask'); 
 
-
+ $router-> get('/category_count' ,'TaskController@categoryListCount');
+ $router->get('/tasks/by_date/{user_id}/{date}' , 'TaskController@GetAllTaskByDate') ;
+ 
  // post 
  $router-> post('/login' ,'UserController@login') ; 
 

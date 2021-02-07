@@ -1,6 +1,5 @@
-package com.spinnertech.noteapp.ui
+package com.spinnertech.noteapp.ui.fragments
 
-import android.os.Binder
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

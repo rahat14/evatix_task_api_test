@@ -1,4 +1,4 @@
-package com.spinnertech.noteapp.ui
+package com.spinnertech.noteapp.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.spinnertech.noteapp.R
 import com.spinnertech.noteapp.databinding.FragmentWalkthroughBinding
+import com.spinnertech.noteapp.models.UserModel
+import com.spinnertech.noteapp.utils.SharedPrefManager
 
 
 class WalkthroughFragment : Fragment() {
@@ -27,9 +29,13 @@ class WalkthroughFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.getStartedTv.setOnClickListener {
-            findNavController().navigate(
-                R.id.action_walkthroughFragment_to_loginFragment
-            )
+           val  model : UserModel? =  SharedPrefManager.get("user_data")
+
+            if(model == null){
+                findNavController().navigate(R.id.action_walkthroughFragment_to_loginFragment)
+            }else {
+                findNavController().navigate(R.id.dashboardFragment)
+            }
         }
     }
 }

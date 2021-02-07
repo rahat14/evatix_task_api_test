@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.AddTaskFragment">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_back_arrow"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_below="@id/backBtn"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/title"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:hint="Add Task"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="20dp"
+            android:background="@null"
+            android:layout_height="wrap_content"/>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Chose Date"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:text="Today, 12.00-13.00"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:drawablePadding="12dp"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:drawableEnd="@drawable/ic_down_arrow"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Chosse Task Type"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cat_spinner"
+            android:inputType="text"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/spinner_background"
+            android:textColor="@color/black"
+            android:textStyle="normal" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descEt"
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:minLines="2"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:background="@color/white"
+                android:textSize="16sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/red"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+       android:layout_margin="35dp"
+        android:id="@+id/addTask"
+        android:text="add task"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_semibold"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

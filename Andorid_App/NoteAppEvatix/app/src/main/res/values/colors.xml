@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#9B9B9B</color>
     <color name="blue">#00B0FF</color>
+    <color name="textClo">#404040</color>
+    <color name="hor_line">#F1F1F5</color>
+    <color name="red">#F44336</color>
 </resources>
