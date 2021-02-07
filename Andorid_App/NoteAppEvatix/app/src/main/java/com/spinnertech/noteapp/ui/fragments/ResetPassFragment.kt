@@ -1,4 +1,4 @@
-package com.spinnertech.noteapp.ui
+package com.spinnertech.noteapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.spinnertech.noteapp.R
 import com.spinnertech.noteapp.databinding.FragmentResetPassBinding
 import com.spinnertech.noteapp.utils.Status
-import com.spinnertech.noteapp.viewmodels.AuthViewModel
 import com.spinnertech.noteapp.viewmodels.RecoverPassViewModel
 
 // TODO: Rename parameter arguments, choose names that match

@@ -1,4 +1,4 @@
-package com.spinnertech.noteapp.ui
+package com.spinnertech.noteapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.spinnertech.noteapp.R
 import com.spinnertech.noteapp.databinding.FragmentForgotPassBinding
-import com.spinnertech.noteapp.databinding.FragmentRegistrationBinding
 import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match

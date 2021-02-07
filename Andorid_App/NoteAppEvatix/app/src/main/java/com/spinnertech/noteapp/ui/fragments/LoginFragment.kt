@@ -1,4 +1,4 @@
-package com.spinnertech.noteapp.ui
+package com.spinnertech.noteapp.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.spinnertech.noteapp.R
 import com.spinnertech.noteapp.databinding.FragmentLoginBinding
-import com.spinnertech.noteapp.databinding.FragmentWalkthroughBinding
+import com.spinnertech.noteapp.utils.SharedPrefManager
 import com.spinnertech.noteapp.utils.Status
 import com.spinnertech.noteapp.viewmodels.AuthViewModel
 
@@ -77,7 +76,9 @@ class LoginFragment : Fragment() {
                 resource ->
                 when (resource.status){
                     Status.SUCCESS -> {
-                        Toast.makeText(context , "Success" , Toast.LENGTH_SHORT).show()
+                     // store the data
+                        SharedPrefManager.put(resource.data?.data?.get(0), "user_data")
+                        findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
                     }
                     Status.ERROR -> {
                         Toast.makeText(context , "Error : ${resource.message}" , Toast.LENGTH_SHORT).show()
